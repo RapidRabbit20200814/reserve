@@ -1,0 +1,152 @@
+@charset "utf-8";
+
+/**************************************************/
+/*                                                */
+/*                標準リセットCSS                 */
+/*                                                */
+/**************************************************/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  background: transparent;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+  blockquote:before,
+  blockquote:after,
+  q:before,
+  q:after {
+    content: '';
+    content: none;
+  }
+
+a {
+  background: transparent;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  text-decoration: none;
+  color: inherit;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+*, *:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/*
+  # Forms
+---------------------------------------------- */
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0;
+  font: inherit;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'],
+[role='button'] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+
+button:-moz-focusring,
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
+  outline: 1px dotted ButtonText;
+}
+
+legend {
+  display: table;
+  max-width: 100%;
+  color: inherit;
+  white-space: normal;
+}
+
+optgroup {
+  font-weight: bold;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+
+[type='checkbox'],
+[type='radio'] {
+  padding: 0;
+}
+
+[type='search'] {
+  outline-offset: -2px;
+  -webkit-appearance: textfield;
+}
+
+::-webkit-file-upload-button {
+  font: inherit;
+  -webkit-appearance: button;
+}

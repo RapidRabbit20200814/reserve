@@ -1,0 +1,218 @@
+@charset "utf-8";
+
+:root {
+  --color-light-gray: #f0f0f8;
+  --color-light-gray-shadow: #e1e1e8;
+  --color-light-pink: #f7e2ec;
+  --color-light-pink-shadow: #f9d7e6;
+  --color-light-blue: #e5f3fb;
+  --color-light-blue-shadow: #cae3f1;
+  --color-accent: #36bdc1;
+}
+
+html {
+  color: #333;
+}
+
+body {
+  background-color: #f7f7f7;
+}
+
+.inner {
+  margin-inline: auto;
+  padding-inline: 20px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+select {
+  padding: 0.3em;
+}
+
+section {
+  padding-block: 1rem;
+}
+
+h1 {
+  margin-block: 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.button {
+  padding: 0.7em;
+  width: 100%;
+  max-width: 180px;
+  font-weight: bold;
+  color: #fff;
+  background-color: var(--color-accent);
+}
+
+.calender__title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.move-month {
+  margin: 0.5em;
+  padding: 0 1em;
+}
+
+.move-month span{
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-top: solid 1px #333;
+  border-right: solid 1px #333;
+}
+
+.move-month--prev span {
+  transform: translateY(-50%) rotate(-135deg);
+}
+
+.move-month--next span {
+  transform: translateY(-50%) rotate(45deg);
+}
+.calender {
+  padding: 2rem 1rem;
+  background-color: #fff;
+}
+.calender__body{
+  margin-top: 1rem;
+  width:100%;
+  display: grid;
+  grid-template-columns: repeat(7,1fr);
+  gap: 2px;
+  text-align: center;
+}
+
+.calendar__item{
+  min-height: 3rem;
+  text-align: center;
+}
+
+.calendar__item.calendar__item--day {
+  min-height: 1.5rem;
+}
+
+.calendar__item--btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3em;
+  width: 100%;
+  padding: 0.5rem 0;
+  background-color: var(--color-light-gray-shadow);
+  border-bottom: solid 5px var(--color-light-gray-shadow);
+}
+
+.calendar__item.is-able .calendar__item--btn {
+  background-color: var(--color-light-gray);
+  border-bottom: solid 5px var(--color-light-gray-shadow);
+  border-radius: 8px;
+  cursor: pointer;
+  pointer-events: initial;
+}
+.calendar__item:not(.is-able) .calendar__item--btn {
+  border-radius: 0;
+  pointer-events: none;
+}
+
+.calendar__item.is-exclusion .calendar__item--btn{
+  background-color: var(--color-light-gray-shadow);
+  border-bottom: solid 5px var(--color-light-gray-shadow);
+}
+
+.calendar__item.is-reserved .calendar__item--btn{
+  background-color: var(--color-light-gray-shadow);
+  border-bottom: solid 5px var(--color-light-gray-shadow);
+}
+
+.calendar__item.is-space .calendar__item--btn{
+  background-color: transparent;
+  border-bottom: transparent;
+}
+.calendar__item:nth-of-type(7n-1):not(.is-space) .calendar__item--btn{
+  background-color: var(--color-light-blue-shadow);
+  border-bottom: solid 5px var(--color-light-blue-shadow);
+}
+.calendar__item:nth-of-type(7n-1):is(.is-able):not(.is-space) .calendar__item--btn{
+  background-color: var(--color-light-blue);
+  border-bottom: solid 5px var(--color-light-blue-shadow);;
+}
+.calendar__item:nth-of-type(7n):not(.is-space) .calendar__item--btn,
+.calendar__item.is-holiday .calendar__item--btn{
+  background-color:var(--color-light-pink-shadow);
+  border-bottom: solid 5px var(--color-light-pink-shadow);
+}
+.calendar__item:nth-of-type(7n):is(.is-able):not(.is-space) .calendar__item--btn{
+  background-color:var(--color-light-pink);
+  border-bottom: solid 5px var(--color-light-pink-shadow);
+}
+
+.calendar__item--date {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.7em;
+  height: 1.7em;
+  border-radius: 50%;
+}
+
+.calendar__item--date.is-today{
+  background-color: #888;
+  color: #fff;
+}
+
+.modal {
+  position: relative;
+  padding: 2rem;
+  border: none;
+}
+.modal__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--color-accent);
+  color: #fff;
+}
+
+.form {
+  margin-top: 2rem;
+}
+.form__row {
+  display: grid;
+  grid-template-columns: 6rem 1fr;
+  align-items: center;
+}
+.form__label + .form__label{
+  margin-top: 1rem;
+}
+.form__row + .form__row {
+  margin-top: 1.5rem;
+}
+.form__divide {
+  margin-block: 1.5rem;
+}
+.form__btn {
+  margin-top: 2rem;
+  text-align: center;
+}
